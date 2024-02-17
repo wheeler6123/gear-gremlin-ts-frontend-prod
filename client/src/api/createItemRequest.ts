@@ -6,7 +6,7 @@ const createItemRequest = async (newItem: NewItem, userId: string) => {
     console.log('createItemRequest: ', newItem, userId)
 
     try {
-        const response = await axios.post(
+        const response: AxiosResponse = await axios.post(
             `${API_URL}items`,
             {
                 ...newItem,
@@ -20,7 +20,8 @@ const createItemRequest = async (newItem: NewItem, userId: string) => {
         );
         return response.data;
     } catch (error) {
-        return error;
+        const axiosError = error as AxiosError;
+        return axiosError.response?.data || { error: 'An error occurred' };
     }
 }
 
