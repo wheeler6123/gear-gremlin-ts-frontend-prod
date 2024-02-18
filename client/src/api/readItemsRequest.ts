@@ -18,8 +18,9 @@ const readItemsRequest = async (): Promise<ResponseData> => {
 
         return response.data;
     } catch (error) {
-        console.error(error);
-        throw error;
+        const axiosError = error as AxiosError;
+        console.error(axiosError.response?.data || axiosError.message);
+        throw axiosError;
     }
 }
 
