@@ -4,12 +4,13 @@ import { Item } from "../types/types";
 
 const updateItemRequest = async ({ itemId, updatedValues }: { itemId: string; updatedValues: Item }): Promise<Item> => {
     try {
-        const response = await axios.put(`${API_URL}items/${itemId}`, updatedValues);
+        const response: AxiosResponse = await axios.put(`${API_URL}items/${itemId}`, updatedValues);
         
         return response.data;
     } catch (error: any) {
-        console.error(error);
-        throw error;
+        const axiosError: AxiosError = error;
+        console.error(axiosError.response?.data || axiosError.message);
+        throw axiosError;
     }
 }
 
