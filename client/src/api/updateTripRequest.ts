@@ -8,8 +8,9 @@ const updateTripRequest = async (trip: Trip): Promise<Trip> => {
 
         return response.data;
     } catch (error: any) {
-        console.error(error);
-        throw error;
+        const axiosError: AxiosError = error;
+        console.error(axiosError.response?.data || axiosError.message);
+        throw axiosError;
     }
 }
 
