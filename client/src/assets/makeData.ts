@@ -30,8 +30,9 @@ export const createNewItem = (): Item => {
 
 export function makeData(...lens: number[]) {
     const makeDataLevel = (depth = 0): Item[] => {
+        // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
         const len = lens[depth]!
-        return range(len).map((d): Item => {
+        return range(len).map((): Item => {
             return createNewItem()
         })
     }
