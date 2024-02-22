@@ -41,7 +41,7 @@ const DonutChart: React.FC<ChartProps> = ({ items, property, title }) => {
     };
 
     const generateColorsArray = (X: number): string[] => {
-        const colorsArray: string[] = randomColor({ count: X, luminosity: "bright" });;
+        const colorsArray: string[] = randomColor({ count: X, luminosity: "bright" });
 
         // for (let i = 0; i < X; i++) {
         //     const color = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
