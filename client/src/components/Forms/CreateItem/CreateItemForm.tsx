@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { useMutation, useQuery, useQueryClient } from 'react-query';
+import React, { useState } from 'react';
+import { useMutation, useQueryClient } from 'react-query';
 import TagSelector from './TagSelector';
 import useCategoryTags from '../../../hooks/useCategoryTags';
 import useUsageTags from '../../../hooks/useUsageTags';
 import createCategoryTagRequest from '../../../api/createCategoryTagRequest';
 import createUsageTagRequest from '../../../api/createUsageTagRequest';
 import createItemRequest from '../../../api/createItemRequest';
-import { Item, NewItem, Tag } from '../../../types/types';
+import { NewItem, Tag } from '../../../types/types';
 
 
-const createItemForm = () => {
+const CreateItemForm: React.FC = () => {
     const queryClient = useQueryClient();
     const [itemFormData, setItemFormData] = useState({
         name: '',
@@ -206,4 +206,4 @@ const createItemForm = () => {
     )
 }
 
-export default createItemForm;
+export default CreateItemForm;
