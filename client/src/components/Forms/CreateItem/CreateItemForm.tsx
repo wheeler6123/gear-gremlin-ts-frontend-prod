@@ -28,7 +28,7 @@ const CreateItemForm: React.FC = () => {
     const { data: categoryTags = [] } = useCategoryTags();
     const { data: usageTags = [] } = useUsageTags();
 
-    const token = localStorage.getItem('token');
+    // const token = localStorage.getItem('token');
     const userId = localStorage.getItem('userId');
 
     const createCategoryTagMutation = useMutation(createCategoryTagRequest, {
@@ -74,6 +74,7 @@ const CreateItemForm: React.FC = () => {
         try {
             const newCategoryTag = await createCategoryTagMutation.mutateAsync(newCategory);
             if (newCategoryTag._id) {
+                // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
                 setSelectedCategories(prevState => [...prevState, { _id: newCategoryTag._id!, name: newCategory }]);
             }
             setNewCategory('');
@@ -87,6 +88,7 @@ const CreateItemForm: React.FC = () => {
         try {
             const newUsageTag = await createUsageTagMutation.mutateAsync(newUsageCondition);
             if (newUsageTag._id) {
+                // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
                 setSelectedUsageConditions(prevState => [...prevState, { _id: newUsageTag._id!, name: newUsageCondition }]);
             }
             setNewUsageCondition('');
