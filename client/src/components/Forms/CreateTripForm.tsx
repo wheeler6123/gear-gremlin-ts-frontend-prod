@@ -14,11 +14,12 @@ interface Props {
     handleCancelClick: () => void;
 }
 
-const createTripForm: React.FC<Props> = ({packedItems, handleSaveTrip, handleCancelClick }) => {
+const CreateTripForm: React.FC<Props> = ({packedItems, handleSaveTrip, handleCancelClick }) => {
     const [tripFormData, setTripFormData] = React.useState({
         tripName: '',
         packedItems: [],
         totalWeight: 0,
+        // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
         userId: localStorage.getItem('userId')!
     });
     const [totalPackWeight, setTotalPackWeight] = React.useState(0);
@@ -44,7 +45,7 @@ const createTripForm: React.FC<Props> = ({packedItems, handleSaveTrip, handleCan
         e.preventDefault();
         if (tripFormData.tripName.trim()) {
             handleSaveTrip({userId: tripFormData.userId, tripName: tripFormData.tripName, totalWeight: totalPackWeight, packedItems});
-        };
+        }
     };
 
     const handleCancel = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -86,4 +87,4 @@ const createTripForm: React.FC<Props> = ({packedItems, handleSaveTrip, handleCan
     )
 }
 
-export default createTripForm;
+export default CreateTripForm;
