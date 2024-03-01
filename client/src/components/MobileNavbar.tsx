@@ -17,6 +17,7 @@ const MobileNavbar: React.FC<MobileNavbarProps> = ({className}) => {
     }
 
     const handleLogout = () => {
+        // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
         const refreshToken = localStorage.getItem('refreshToken')!;
 
         logoutRequest(refreshToken)
