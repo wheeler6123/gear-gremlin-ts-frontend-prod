@@ -6,6 +6,7 @@ const Navbar = () => {
     const navigate = useNavigate();
 
     const handleLogout = () => {
+        // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
         const refreshToken = localStorage.getItem('refreshToken')!;
 
         logoutRequest(refreshToken)
