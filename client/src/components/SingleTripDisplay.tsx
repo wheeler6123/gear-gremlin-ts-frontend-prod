@@ -39,6 +39,7 @@ const SingleTripDisplay: React.FC<SingleTripDisplayProps> = ({tripId, setShowSin
     };
 
     const exportToPDF = () => {
+        // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
         const element = document.querySelector('#pdf')!;
         const opt = {
             margin: 1,
