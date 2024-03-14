@@ -1,5 +1,4 @@
 import * as React from "react";
-import  ReactDOM  from "react-dom/client";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Table  as BTable } from 'react-bootstrap';
 import {
@@ -113,7 +112,7 @@ const columns: ColumnDef<Item>[] = [
         header: () => <div>Tags</div>,
         accessorKey: 'tags',
         cell: (props) => {
-            const tags: string[] = props.getValue();
+            const tags: string[] = props.getValue() as string[];
             return (
                 <div>
                     {tags.join(', ')}
@@ -125,7 +124,7 @@ const columns: ColumnDef<Item>[] = [
         header: () => <div>Conditions</div>,
         accessorKey: 'conditions',
         cell: (props) => {
-            const conditions: string[] = props.getValue();
+            const conditions: string[] = props.getValue() as string[];
             return (
                 <div>
                     {conditions.join(', ')}
@@ -137,7 +136,7 @@ const columns: ColumnDef<Item>[] = [
         header: () => <div>Packed</div>,
         accessorKey: 'packed',
         cell: (props) => {
-            const packed: boolean = props.getValue();
+            const packed: boolean = props.getValue() as boolean;
             return (
                 <div>
                     {packed ? 'Yes' : 'No'}
