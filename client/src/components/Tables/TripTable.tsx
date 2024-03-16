@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import useTable from "../../hooks/useTable";
 import TableFooter from "./TableFooter";
-import { Item } from "../../types/types";
 import { Trip } from "../../types/types";
 
 type ResponseData = Trip[];
