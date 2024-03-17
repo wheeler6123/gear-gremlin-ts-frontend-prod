@@ -24,7 +24,7 @@ const useTable = (data: any[], page: number, perPage: number) => {
 
         const slice = sliceData(data, page, perPage);
         setSlice([...slice]);
-
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [data, setTableRange, page, setSlice]);
 
     return { slice, range : tableRange}
