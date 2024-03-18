@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import updatePasswordRequest from "../api/updatePasswordRequest";
 import Header from "../components/Header";
 import UpdatePasswordForm from '../components/Forms/updatePasswordForm';
 
