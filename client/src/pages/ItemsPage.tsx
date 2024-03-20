@@ -11,7 +11,6 @@ import deleteItemRequest from "../api/deleteItemRequest";
 
 const ItemsPage: React.FC = () => {
     const {isLoading, data: items} = useQuery('items', () => readItemsRequest());   
-    const userId = localStorage.getItem('userId');
 
     const queryClient = useQueryClient();
 
