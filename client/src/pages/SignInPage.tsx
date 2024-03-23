@@ -26,17 +26,17 @@ const SignInPage: React.FC = () => {
             }
             handleGoogleLogin();
         }
-    }, []);
+    }, [navigate]);
+
+    const accessToken = localStorage.getItem('accessToken');
+    const refreshToken = localStorage.getItem('refreshToken');
+    const userId = localStorage.getItem('userId');
 
     useEffect(() => {
-        const accessToken = localStorage.getItem('accessToken');
-        const refreshToken = localStorage.getItem('refreshToken');
-        const userId = localStorage.getItem('userId');
-
         if (accessToken && refreshToken && userId) {
             navigate('/items');
         }
-    }, [navigate, localStorage.getItem('accessToken'), localStorage.getItem('refreshToken'), localStorage.getItem('userId')]); // Add `navigate` to the dependency array
+    }, [navigate, accessToken, refreshToken, userId]); // Add `navigate` to the dependency array
 
     const handleSuccessfulLogin = async (email: string, password: string) => {
         try {
