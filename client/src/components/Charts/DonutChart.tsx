@@ -83,7 +83,7 @@ const DonutChart: React.FC<ChartProps> = ({ items, property, title }) => {
                                     fill="#8884d8"
                                     label
                                 >
-                                    {dataCountArray.map((entry, index) => (
+                                    {dataCountArray.map((_entry, index) => (
                                         <Cell key={`cell-${index}`} fill={currentColorsArray[index % currentColorsArray.length]} />
                                     ))}
                                 </Pie>
