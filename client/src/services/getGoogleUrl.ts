@@ -13,16 +13,10 @@ function getGoogleOAuthUrl() {
         ].join(' '),
     };
 
-    console.log('options: ', options);
-
     const qs = new URLSearchParams(options);
 
-    console.log('qs: ', qs.toString());
-
     const url = `${rootUrl}?${qs.toString()}`;
-
-    console.log('url: ', url);
-
+    
     return url;
 }
 
