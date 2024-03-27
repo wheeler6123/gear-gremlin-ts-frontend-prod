@@ -7,7 +7,9 @@ import Header from "../components/Header";
 import LoginUserForm from '../components/Forms/loginUserForm';
 
 const SignInPage: React.FC = () => {
-    const { trackPageView } = useMatomo();
+    const { trackPageView, enableLinkTracking } = useMatomo();
+
+    enableLinkTracking();
 
     // Track page view
     useEffect(() => {

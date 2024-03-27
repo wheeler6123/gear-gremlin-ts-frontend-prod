@@ -31,12 +31,12 @@ const instance = createInstance({
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <main>
-    <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-        <MatomoProvider value={instance}>
-          <App />
-        </MatomoProvider>
-      </BrowserRouter>
-    </QueryClientProvider>
+    <MatomoProvider value={instance}>
+      <QueryClientProvider client={queryClient}>
+        <BrowserRouter>
+            <App />          
+        </BrowserRouter>
+      </QueryClientProvider>
+    </MatomoProvider>
   </main>
 );

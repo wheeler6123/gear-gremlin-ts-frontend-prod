@@ -6,16 +6,19 @@ import loginRequest from "../api/loginRequest";
 import Header from "../components/Header";
 
 const SignUpPage: React.FC = () => {
-    const { trackPageView } = useMatomo();
-    const navigate = useNavigate();
-    const location = useLocation();
-    const searchParams = new URLSearchParams(location.search);
-    const email = searchParams.get("email");
+    const { trackPageView, enableLinkTracking } = useMatomo();
+
+    enableLinkTracking();
 
     // Track page view
     useEffect(() => {
         trackPageView()
     }, []);
+    
+    const navigate = useNavigate();
+    const location = useLocation();
+    const searchParams = new URLSearchParams(location.search);
+    const email = searchParams.get("email");
 
     const handleSuccessfulLogin = async (email: string, password: string) => {
         try {

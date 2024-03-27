@@ -12,7 +12,9 @@ const HomePage = () => {
     const [showHeader, setShowHeader] = useState<boolean>(false);
     const [expandedCardIndex, setExpandedCardIndex] = useState<number[]>([]);
     const [email, setEmail] = useState('');
-    const { trackPageView, trackEvent } = useMatomo()
+    const { trackPageView, trackEvent, enableLinkTracking } = useMatomo()
+
+    enableLinkTracking();
 
     // Track page view
     useEffect(() => {
