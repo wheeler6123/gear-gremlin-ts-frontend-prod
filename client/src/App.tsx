@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { useMatomo } from '@jonkoops/matomo-tracker-react';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import HomePage from './pages/HomePage';
 import ItemsPage from './pages/ItemsPage';
 import TripsPage from './pages/TripsPage';
@@ -9,24 +9,24 @@ import SignInPage from './pages/SignInPage';
 import ChangePasswordPage from './pages/ChangePasswordPage';
 import './App.css';
 
-declare global {
-  interface Window { 
-    _mtm: any; 
-  }
-}
+// declare global {
+//   interface Window { 
+//     _mtm: any; 
+//   }
+// }
 
 function App() {
   const { enableLinkTracking } = useMatomo();
   
-  useEffect(() => {
-    var _mtm = window._mtm = window._mtm || [];
-    _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
-    (function() {
-      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-      // eslint-disable-next-line no-non-null-assertion
-      g.async=true; g.src='https://matomo-g6ro.onrender.com/js/container_29eRwnvu.js'; s.parentNode!.insertBefore(g,s);
-    })();
-  });
+  // useEffect(() => {
+  //   var _mtm = window._mtm = window._mtm || [];
+  //   _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
+  //   (function() {
+  //     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+  //     // eslint-disable-next-line no-non-null-assertion
+  //     g.async=true; g.src='https://matomo-g6ro.onrender.com/js/container_29eRwnvu.js'; s.parentNode!.insertBefore(g,s);
+  //   })();
+  // });
 
 
   enableLinkTracking();
