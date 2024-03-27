@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useMatomo } from "@jonkoops/matomo-tracker-react";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import loginRequest from "../api/loginRequest";
 import googleLoginRequest from "../api/googleLoginRequest";
 import Header from "../components/Header";
@@ -59,6 +60,10 @@ const SignInPage: React.FC = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Gear Gremlin - Login</title>
+                <meta name="description" content="Login to your Gear Gremlin account here"/>
+            </Helmet>
             <Header />
             <LoginUserForm onSuccess={handleSuccessfulLogin} />
         </div>

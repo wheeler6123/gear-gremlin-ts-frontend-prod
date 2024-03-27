@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useMatomo } from "@jonkoops/matomo-tracker-react";
+import { Helmet } from "react-helmet";
 import CreateUserForm from "../components/Forms/CreateUserForm";
 import loginRequest from "../api/loginRequest";
 import Header from "../components/Header";
@@ -31,6 +32,10 @@ const SignUpPage: React.FC = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Gear Gremlin - Register</title>
+                <meta name="description" content="Sign up for your free Gear Gremlin account here! Create your account with an email and password or login with Google!"/>
+            </Helmet>
             <Header />
             <CreateUserForm email={email} onSuccess={handleSuccessfulLogin} />
         </div>

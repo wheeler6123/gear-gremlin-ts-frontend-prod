@@ -13,6 +13,7 @@ import SingleTripDisplay from "../components/SingleTripDisplay";
 import { Item } from "../types/types";
 import React, { useEffect } from "react";
 import { useMatomo } from "@jonkoops/matomo-tracker-react";
+import { Helmet } from "react-helmet";
 
 interface SaveTripParams {
     userId: string;
@@ -97,6 +98,10 @@ const TripsPage: React.FC = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Gear Gremlin - Trips Dashboard</title>
+                <meta name="description" content="Pack for your trip! In the Trips Dashboard, you can access all of your saved trips, create a new trip, or export a packing list!"/>
+            </Helmet>
             <Navbar />
             <MobileNavbar className='mobile-navbar-component' />
             <div className="trips-page-container">

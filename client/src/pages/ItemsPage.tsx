@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { useMatomo } from "@jonkoops/matomo-tracker-react";
 import CreateItemForm from "../components/Forms/CreateItem/CreateItemForm";
 import { ClipLoader } from "react-spinners";
+import { Helmet } from "react-helmet";
 import deleteItemRequest from "../api/deleteItemRequest";
 
 
@@ -69,6 +70,10 @@ const ItemsPage: React.FC = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Gear Gremlin - Items Dashboard</title>
+                <meta name="description" content="Organize all of your gear here on the Gear Gremlin Items Dashboard. Upload your inventory, organize it by category or use condition, and delete old unused gear!"/>
+            </Helmet>
             <Navbar />
             <MobileNavbar className='mobile-navbar-component'/>
             <div className="items-page-container">
