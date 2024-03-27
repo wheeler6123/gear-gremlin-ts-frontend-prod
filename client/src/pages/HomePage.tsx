@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useMatomo } from "@jonkoops/matomo-tracker-react";
 import Header from "../components/Header";
 import gearLayout from "../assets/gear-layout.jpg";
 import camping from "../assets/camping.jpg";
@@ -11,11 +12,19 @@ const HomePage = () => {
     const [showHeader, setShowHeader] = useState<boolean>(false);
     const [expandedCardIndex, setExpandedCardIndex] = useState<number[]>([]);
     const [email, setEmail] = useState('');
+    const { trackPageView, trackEvent } = useMatomo()
+
+    // Track page view
+    useEffect(() => {
+        trackPageView()
+    }, []);
 
     const navigate = useNavigate();
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+        // Track click on button
+        trackEvent({ category: 'homepage-register', action: 'click-event' })
         // Redirect the user to the signup page with the email prefilled
         navigate(`/signup?email=${email}`);
     };
@@ -25,6 +34,8 @@ const HomePage = () => {
     };
 
     const handleCardClick = (index: number): void => {
+        // Track click on button
+        trackEvent({ category: 'homepage-cards', action: 'click-event' })
         const updatedIndexes = [...expandedCardIndex]; // Create a copy of the expandedCardIndex array
         const indexPosition = updatedIndexes.indexOf(index); // Check if the index is already in the array
 

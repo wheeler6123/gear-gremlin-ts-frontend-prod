@@ -4,6 +4,8 @@ import InventoryTable from "../components/Tables/InventoryTable";
 import DonutChart from "../components/Charts/DonutChart";
 import readItemsRequest from "../api/readItemsRequest";
 import { useQuery, useMutation, useQueryClient } from "react-query";
+import { useEffect } from "react";
+import { useMatomo } from "@jonkoops/matomo-tracker-react";
 import CreateItemForm from "../components/Forms/CreateItem/CreateItemForm";
 import { ClipLoader } from "react-spinners";
 import deleteItemRequest from "../api/deleteItemRequest";
@@ -11,6 +13,12 @@ import deleteItemRequest from "../api/deleteItemRequest";
 
 const ItemsPage: React.FC = () => {
     const {isLoading, data: items} = useQuery('items', () => readItemsRequest());   
+    const { trackPageView } = useMatomo();
+
+    // Track page view
+    useEffect(() => {
+        trackPageView()
+    }, []);
 
     const queryClient = useQueryClient();
 

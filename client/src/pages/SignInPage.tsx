@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useMatomo } from "@jonkoops/matomo-tracker-react";
 import { useNavigate } from "react-router-dom";
 import loginRequest from "../api/loginRequest";
 import googleLoginRequest from "../api/googleLoginRequest";
@@ -6,6 +7,13 @@ import Header from "../components/Header";
 import LoginUserForm from '../components/Forms/loginUserForm';
 
 const SignInPage: React.FC = () => {
+    const { trackPageView } = useMatomo();
+
+    // Track page view
+    useEffect(() => {
+        trackPageView()
+    }, []);
+
     const navigate = useNavigate();
 
     useEffect(() => {

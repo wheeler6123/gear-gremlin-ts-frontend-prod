@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { useMatomo } from '@jonkoops/matomo-tracker-react';
 import HomePage from './pages/HomePage';
 import ItemsPage from './pages/ItemsPage';
 import TripsPage from './pages/TripsPage';
@@ -8,6 +9,9 @@ import ChangePasswordPage from './pages/ChangePasswordPage';
 import './App.css';
 
 function App() {
+  const { enableLinkTracking } = useMatomo();
+
+  enableLinkTracking();
 
   return (
     <div className="App">

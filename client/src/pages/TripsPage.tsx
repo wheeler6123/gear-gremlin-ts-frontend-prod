@@ -11,7 +11,8 @@ import InventoryTable from "../components/Tables/InventoryTable";
 import CreateTripForm from "../components/Forms/CreateTripForm";
 import SingleTripDisplay from "../components/SingleTripDisplay";
 import { Item } from "../types/types";
-import React from "react";
+import React, { useEffect } from "react";
+import { useMatomo } from "@jonkoops/matomo-tracker-react";
 
 interface SaveTripParams {
     userId: string;
@@ -21,6 +22,13 @@ interface SaveTripParams {
 }
 
 const TripsPage: React.FC = () => {
+    const { trackPageView } = useMatomo();
+
+    // Track page view
+    useEffect(() => {
+        trackPageView()
+    }, []);
+    
     const queryClient = useQueryClient();
 
     const { isLoading: isLoadingTrips, data: trips } = useQuery("trips", () =>
