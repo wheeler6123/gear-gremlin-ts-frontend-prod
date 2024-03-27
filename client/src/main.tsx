@@ -23,9 +23,9 @@ const instance = createInstance({
   linkTracking: false, // optional, default value: true
   configurations: { // optional, default value: {}
     // any valid matomo configuration, all below are optional
-    // disableCookies: true,
-    // setSecureCookie: true,
-    // setRequestMethod: 'POST'
+    disableCookies: true,
+    setSecureCookie: true,
+    setRequestMethod: 'POST'
   }
 })
 
