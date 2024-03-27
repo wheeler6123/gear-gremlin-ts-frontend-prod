@@ -9,9 +9,14 @@ import SignInPage from './pages/SignInPage';
 import ChangePasswordPage from './pages/ChangePasswordPage';
 import './App.css';
 
+declare global {
+  interface Window { 
+    _mtm: any; 
+  }
+}
+
 function App() {
   const { enableLinkTracking } = useMatomo();
-  var window: any;
   
   useEffect(() => {
     var _mtm = window._mtm = window._mtm || [];
