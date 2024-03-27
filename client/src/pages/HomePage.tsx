@@ -70,9 +70,7 @@ const HomePage = () => {
     return (
         <div>
             <Helmet>
-                <title>Gear Gremlin</title>
                 <meta name="description" content="Don't forget to pack anything on your next outdoor adventure! Enter your gear inventory into the Gear Gremlin database, then create custom packing lists for any trip you want! Pack lists can be saved for future use and even exported to use as  a packing checklist!"/>
-                <link rel="icon" type="image/png" href="/favicon.ico" sizes="16x16" />
             </Helmet>
             <div className={showHeader ? 'header' : 'header-hidden'}>
                 <Header />
