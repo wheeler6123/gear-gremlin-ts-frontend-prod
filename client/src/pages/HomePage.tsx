@@ -90,7 +90,7 @@ const HomePage = () => {
                         <br />
                         <p className="mb-0 text-muted">
                             Or, register and login with your Google account!{' '}
-                            <a href={getGoogleOAuthUrl()}>Login with Google</a>
+                            <a href={getGoogleOAuthUrl()} className="google-login-link">Login with Google</a>
                         </p>
                         <p className="mb-0 text-muted">
                             Already have an account?{' '}

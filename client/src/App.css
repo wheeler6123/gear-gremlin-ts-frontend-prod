@@ -779,6 +779,17 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
   }
 
+  .google-login-link::before {
+    content: "\A";
+    white-space: pre;
+  }
+
+  .google-login-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .features {
     width: 95%;
     margin: 15px;
