@@ -952,6 +952,10 @@ h1, h2, h3, h4, h5, h6 {
   .mobile-dropdown-list-item:hover {
     border: 1px solid #fff;
   }
+
+  .single-trip-item-weight {
+    min-width: 50px;
+  }
 }
 
 @media (min-width: 601px) and (max-width: 799px) {
