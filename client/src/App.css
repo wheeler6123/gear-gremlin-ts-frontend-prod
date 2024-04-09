@@ -732,7 +732,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .single-trip-item-name {
-  width: 175px;
+  width: 350px;
 }
 
 .total-weight {
@@ -762,6 +762,17 @@ h1, h2, h3, h4, h5, h6 {
 .card-button {
   margin-left: 20px;
   margin-bottom:10px;
+}
+
+.trip-table-button {
+  background-color: #3f4d67;
+  color: #f1f1f1;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
 }
 
 /* Trips Dashboard Styles End */

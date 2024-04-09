@@ -80,8 +80,8 @@ const CreateTripForm: React.FC<Props> = ({packedItems, handleSaveTrip, handleCan
                     ))}
                 </ul>
                 <p>Item Count: {packedItems.length} Total Pack Weight: {packWeightConversion(totalPackWeight)}</p>
-                <button className='button card-button' type='submit'>Save Trip</button>
-                <button className='button card-button' onClick={handleCancel}>Cancel</button>
+                <button className='button card-button trip-table-button' type='submit'>Save Trip</button>
+                <button className='button card-button trip-table-button' onClick={handleCancel}>Cancel</button>
             </form>
         </div>
     )
