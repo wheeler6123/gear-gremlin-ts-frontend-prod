@@ -176,8 +176,13 @@ const HomePage = () => {
                 <div className="faq">
                     <h2 className='faq-header'>Frequently Asked Questions</h2>
                     <div className='faq-card'> {/* index 0 */ }
-                        <div className={`expandable-card ${expandedCardIndex.includes(0) ? 'expanded' : ''}`} onClick={() => handleCardClick(0)}>
-                            <h3>What is Gear 175px     Gear Gremlin is an application that allows you to keep track of all of your outdoor adventure gear in one convenient location. Create your gear inventory, and then add gear to your pack for your next adventure. Gear Gremlin will track the overall weight of your pack as you build it, eliminating the guesswork or need to weigh and repack your gear.
+                    <div className={`expandable-card ${expandedCardIndex.includes(0) ? 'expanded' : ''}`} onClick={() => handleCardClick(0)}>
+                            <h3>What is Gear Gremlin?</h3>
+                            <span>+</span>
+                        </div>
+                        {expandedCardIndex.includes(0) && (
+                            <p className='faq-answer'>
+                                Gear Gremlin is an application that allows you to keep track of all of your outdoor adventure gear in one convenient location. Create your gear inventory, and then add gear to your pack for your next adventure. Gear Gremlin will track the overall weight of your pack as you build it, eliminating the guesswork or need to weigh and repack your gear.
                             </p>
                         )}
                     </div>
