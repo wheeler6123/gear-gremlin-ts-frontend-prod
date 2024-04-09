@@ -273,6 +273,11 @@ h1, h2, h3, h4, h5, h6 {
   flex-grow: 1;
 }
 
+.login-button-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 /* Home Page Styles Start */
 
 .home-page {
@@ -785,10 +790,22 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .header {
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
     width: 100vw;
+    padding: 10px;
   }
+
+  .login-button {
+    margin-right: 0;
+    font-size: 1.2rem;
+    background-color: rgba(83, 91, 242, 0.9);
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    border-style: none;
+  }
+  
 
   .hero {
     display: flex;
@@ -819,17 +836,6 @@ h1, h2, h3, h4, h5, h6 {
   .hero-cta {
     width: 100%;
     padding: 0;
-    align-items: center;
-  }
-
-  .google-login-link::before {
-    content: "\A";
-    white-space: pre;
-  }
-
-  .google-login-link {
-    display: flex;
-    justify-content: center;
     align-items: center;
   }
 

@@ -8,9 +8,9 @@ const Header = () => {
             <div className="spacer"></div> {/* Spacer div */}
             <div>Gear Gremlin</div>
             <div className="spacer"></div> {/* Spacer div */}
-            <button className="login-button">
+            <div className="spacer login-button-container"><button className="login-button">
                 <a href="/signin">Login</a>
-            </button>
+            </button></div>
         </div>
     )
 }
