@@ -723,6 +723,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Trips Dashboard Styles Start */
 
+.trips-page-container {
+  margin: 25px 10px 25px 264px;
+  height: auto;
+}
+
 .single-trip-card {
   margin: 0 15px 30px 15px;
 }
@@ -1048,9 +1053,9 @@ h1, h2, h3, h4, h5, h6 {
       margin-bottom: 20px;
     }
   
-    .items-page-container {
-      margin-left: 0;
-    }
+  .items-page-container {
+    margin-left: 0;
+  }
 
   #inventory-table-item-tags,
   #inventory-table-item-conditions,
@@ -1177,7 +1182,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@media (min-width: 800px) and (max-width: 999px) {
+@media (max-width: 1000px) {
   .mobile-navbar {
     display: flex;
     position: fixed;
@@ -1197,7 +1202,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 85px;
   }
 
-  .items-page-container {
+  .items-page-container, .trips-page-container {
     margin-left: 0;
   }
 }
