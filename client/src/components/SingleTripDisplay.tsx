@@ -70,8 +70,8 @@ const SingleTripDisplay: React.FC<SingleTripDisplayProps> = ({tripId, setShowSin
                     )}
                     {trip && <div className="total-weight">{`Your total pack weighs: ${packWeightConversion(trip.data.totalWeight)}`}</div>}
                     <br />
-                    <button className='button card-button' onClick={exportToPDF}>Export to PDF</button>
-                    <button className='button card-button' onClick={() => setShowSingleTrip(false)}>Close</button>
+                    <button className='button card-button trip-table-button' onClick={exportToPDF}>Export to PDF</button>
+                    <button className='button card-button trip-table-button' onClick={() => setShowSingleTrip(false)}>Close</button>
                 </div>
             </div>
         </div>
