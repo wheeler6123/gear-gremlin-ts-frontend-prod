@@ -640,10 +640,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Custom Dashboard Styles Start */
 
-.main-container {
-  margin-left: 264px;
-}
-
 #inventory-table-row {
   font-size: 12px;
   line-height: 26px;
@@ -663,7 +659,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Items Dashboard Styles Start */
 
 .items-page-container {
-  margin: 25px 10px;
+  margin: 25px 10px 25px 264px;
   height: auto;
 }
 
@@ -1052,9 +1048,9 @@ h1, h2, h3, h4, h5, h6 {
       margin-bottom: 20px;
     }
   
-  .main-container {
-    margin-left: 0;
-  }
+    .items-page-container {
+      margin-left: 0;
+    }
 
   #inventory-table-item-tags,
   #inventory-table-item-conditions,
@@ -1160,18 +1156,14 @@ h1, h2, h3, h4, h5, h6 {
       width: auto;
     }
 
-  .main-container {
-    margin-left: 0;
-  }
-
   .charts-container {
       flex-direction: column;
     }
 }
 
-@media (min-width: 1000px) and (max-width: 1200px) {
-  .main-container {
-    margin-left: 264px;
+@media (min-width: 1001px) and (max-width: 1200px) {
+  .items-page-container {
+    margin-left: 0;
   }
 }
 
@@ -1185,7 +1177,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@media (max-width: 1000px) {
+@media (min-width: 800px) and (max-width: 999px) {
   .mobile-navbar {
     display: flex;
     position: fixed;
@@ -1203,5 +1195,9 @@ h1, h2, h3, h4, h5, h6 {
 
   .items-page-container, .trips-page-container {
     margin-top: 85px;
+  }
+
+  .items-page-container {
+    margin-left: 0;
   }
 }
