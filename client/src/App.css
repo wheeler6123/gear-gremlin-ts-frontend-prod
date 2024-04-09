@@ -354,6 +354,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1rem;
 }
 
+.hero-cta p {
+  font-size: 1rem;
+}
+
 /* .registration-form button {
   width: 320px;
   height: 40px;

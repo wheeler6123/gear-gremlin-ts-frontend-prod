@@ -105,13 +105,13 @@ const HomePage = () => {
                             <button className='button' type="submit">Register Now</button>
                         </form>
                         <br />
-                        <p className="mb-0 text-muted">
+                        {/* <p className="mb-0 text-muted">
                             Or, register and login with your Google account!{' '}
                             <a href={getGoogleOAuthUrl()} className="google-login-link">Login with Google</a>
-                        </p>
-                        <p className="mb-0 text-muted">
+                        </p> */}
+                        <p>
                             Already have an account?{' '}
-                            <a href="/signin">Login</a>
+                            <a className="text-uppercase" href="/signin">Login Here</a>
                         </p>
                     </div>
                 </div>
