@@ -180,7 +180,7 @@ const CreateItemForm: React.FC = () => {
                     value={newCategory}
                     onChange={handleNewCategoryChange}
                 />
-                <button className='tag-submit-button' onClick={handleNewCategorySubmit}>Add Category</button>
+                { newCategory !== '' ? <button className='tag-submit-button' onClick={handleNewCategorySubmit}>Add Category</button> : null }
                 <label htmlFor="usageConditions">Select Use Conditions</label>
                 <TagSelector
                     tags={usageTags}
@@ -201,7 +201,7 @@ const CreateItemForm: React.FC = () => {
                     value={newUsageCondition}
                     onChange={handleNewUsageConditionChange}
                 />
-                <button className='tag-submit-button' onClick={handleNewUsageConditionSubmit}>Add Use Condition</button>
+                { newUsageCondition !== '' ? <button className='tag-submit-button' onClick={handleNewUsageConditionSubmit}>Add Use Condition</button> : null }
                 <button className='button new-item-button'>Add New Item</button>
             </form>
         </div>

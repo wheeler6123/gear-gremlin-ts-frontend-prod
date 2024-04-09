@@ -71,7 +71,7 @@ const TripTable: React.FC<Props> = ({ trips, perPage, setPlanTrip, onTripClick, 
                             page={page}
                             setPage={setPage}
                         />
-                        <button className='button card-button' onClick={() => setPlanTrip(true)}>Plan a new trip</button>
+                        <button className='button card-button trip-table-button' onClick={() => setPlanTrip(true)}>Plan a new trip</button>
                     </div>
                 </div>
             </div>

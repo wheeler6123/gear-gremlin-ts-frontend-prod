@@ -7,7 +7,6 @@ import gearLayout from "../assets/gear-layout.jpg";
 import camping from "../assets/camping.jpg";
 import checklist from "../assets/checklist.jpg";
 import riverFishing from "../assets/river-fishing.jpg"
-import getGoogleOAuthUrl from "../services/getGoogleUrl";
 
 const HomePage = () => {
     const [showHeader, setShowHeader] = useState<boolean>(false);
@@ -105,13 +104,13 @@ const HomePage = () => {
                             <button className='button' type="submit">Register Now</button>
                         </form>
                         <br />
-                        <p className="mb-0 text-muted">
+                        {/* <p className="mb-0 text-muted">
                             Or, register and login with your Google account!{' '}
                             <a href={getGoogleOAuthUrl()} className="google-login-link">Login with Google</a>
-                        </p>
-                        <p className="mb-0 text-muted">
+                        </p> */}
+                        <p>
                             Already have an account?{' '}
-                            <a href="/signin">Login</a>
+                            <a className="text-uppercase" href="/signin">Login Here</a>
                         </p>
                     </div>
                 </div>
@@ -178,12 +177,7 @@ const HomePage = () => {
                     <h2 className='faq-header'>Frequently Asked Questions</h2>
                     <div className='faq-card'> {/* index 0 */ }
                         <div className={`expandable-card ${expandedCardIndex.includes(0) ? 'expanded' : ''}`} onClick={() => handleCardClick(0)}>
-                            <h3>What is Gear Gremlin?</h3>
-                            <span>+</span>
-                        </div>
-                        {expandedCardIndex.includes(0) && (
-                            <p className='faq-answer'>
-                                Gear Gremlin is an application that allows you to keep track of all of your outdoor adventure gear in one convenient location. Create your gear inventory, and then add gear to your pack for your next adventure. Gear Gremlin will track the overall weight of your pack as you build it, eliminating the guesswork or need to weigh and repack your gear.
+                            <h3>What is Gear 175px     Gear Gremlin is an application that allows you to keep track of all of your outdoor adventure gear in one convenient location. Create your gear inventory, and then add gear to your pack for your next adventure. Gear Gremlin will track the overall weight of your pack as you build it, eliminating the guesswork or need to weigh and repack your gear.
                             </p>
                         )}
                     </div>

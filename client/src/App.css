@@ -102,7 +102,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #mobile-dropdown-button {
   display: none;
-  background: #3f4d67;
+  background: #3f4d67; 
   border: none;
   color: #fff;
   font-weight: 100;
@@ -231,7 +231,8 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   height: 100px;
   width: 100vw;
   font-size: 3rem;
@@ -243,12 +244,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .login-button {
-  margin-right: 50px;
-  font-size: 2.5rem;
+  margin-right: 20px;
+  font-size: 1.5rem;
+  background-color: rgba(83, 91, 242, 0.9);
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  border-style: none;
+}
+
+.login-button:hover {
+  background-color: rgba(23, 23, 23, 1);
+  border:2px solid white;
+  border-style: outset;
+  box-shadow: 0 0 2px 2px rgba(0,0,0,0.5);
+  transform: scale(1.1);
+}
+
+.login-button > a {
+  color: white;
 }
 
 .header-hidden {
   display: none;
+}
+
+.spacer {
+  flex-grow: 1;
 }
 
 /* Home Page Styles Start */
@@ -329,6 +351,10 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 5px;
   border: 1px solid black;
   padding: 0 10px;
+  font-size: 1rem;
+}
+
+.hero-cta p {
   font-size: 1rem;
 }
 
@@ -455,6 +481,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .faq-answer {
   padding: 20px 0;
+  font-size: 1rem;
 }
 
 /* Home Page Styles End */
@@ -653,7 +680,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tag-submit-button {
-  background-color: rgba(23, 23, 23, 1);
+  background-color: #3f4d67;
   color: #f1f1f1;
   border-radius: 8px;
   border: 1px solid transparent;
@@ -679,6 +706,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .new-item-button {
+  background-color: #3f4d67;
+  color: #f1f1f1;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
   width: 60%;
   align-self: center;
   margin-top: 25px;
@@ -700,7 +732,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .single-trip-item-name {
-  width: 175px;
+  width: 350px;
 }
 
 .total-weight {
@@ -730,6 +762,17 @@ h1, h2, h3, h4, h5, h6 {
 .card-button {
   margin-left: 20px;
   margin-bottom:10px;
+}
+
+.trip-table-button {
+  background-color: #3f4d67;
+  color: #f1f1f1;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
 }
 
 /* Trips Dashboard Styles End */
