@@ -795,6 +795,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     width: 100vw;
     padding: 10px;
+    font-size: 2rem;
   }
 
   .login-button {
