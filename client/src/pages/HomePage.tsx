@@ -81,13 +81,14 @@ const HomePage = () => {
                             Welcome to Gear Gremlin!
                         </h1>
                         <p className="hero-subtitle">
-                            Your <span>ultimate</span> outdoor adventure gear organizer! 
+                            Your <span>ultimate</span> outdoor adventure trip planner and gear organizer! Great for all of your outdoor trips, including hiking, camping, fishing, hunting, or whatever else takes you outdoors! 
                             <br />
-                            Input and track all of your gear in one convenient place!
                             <br />
-                            Plan for your next adventure with ease, adding the gear you wish to take based on trip duration, weather, and more!
+                            Input and track all of your gear in one convenient place! Gear Gremlin lets you upload as much equipment as you'd like, along with descriptions, weight, and custom organizer tags to make finding what you need a breeze.
                             <br />
-                            Never forget your gear again!
+                            <br />
+                            Plan for your next adventure with ease, with all of your outdoor equipment available at your fingertips. Simply select the items you wish to bring and Gear Gremlin will create your custom pack checklist and let you know exactly how much weight you've added to your pack. Then use it as a packing checklist or share it with your friends to make planning easy!
+                            <br />
                         </p>
                     </div>
                     <div className="hero-cta">
@@ -182,7 +183,7 @@ const HomePage = () => {
                         </div>
                         {expandedCardIndex.includes(0) && (
                             <p className='faq-answer'>
-                                Gear Gremlin is an application that allows you to keep track of all of your outdoor adventure gear in one convenient location. Create your gear inventory, and then add gear to your pack for your next adventure. Gear Gremlin will track the overall weight of your pack as you build it, eliminating the guesswork or need to weigh and repack your gear.
+                                Gear Gremlin is a handy application that allows you to keep track of all of your outdoor adventure gear in one convenient location. Create your gear inventory, and then add gear to your pack for your next adventure. Gear Gremlin will track the overall weight of your pack as you build it, eliminating the guesswork or need to repeatedly weigh and repack your gear. With Gear Gremlin, you can head out confident that you've packed and prepared well for the adventure ahead, without worrying that you may have left behind vital equipment.
                             </p>
                         )}
                     </div>
@@ -193,7 +194,7 @@ const HomePage = () => {
                         </div>
                         {expandedCardIndex.includes(1) && (
                             <p className='faq-answer'>
-                                Gear Gremlin is completely free to use. It was built by outdoor enthusiasts for their own personal use, and we decided to share it with the world after we found it so helpful. We hope you enjoy it!
+                                Gear Gremlin is completely free to use. It was built by outdoor enthusiasts for their own personal use, and we decided to share it with the world after we found it so helpful. In addition, we don't share or sell any of your data, there are no ads, and we will never bother you with any emails! We hope you enjoy it! If you would like to help support Gear Gremlin, you are welcome to <a href="https://buymeacoffee.com/wheeler6123">buy us a coffee</a> if you are feeling generous!
                             </p>
                         )}
                     </div>
@@ -204,7 +205,7 @@ const HomePage = () => {
                         </div>
                         {expandedCardIndex.includes(2) && (
                             <p className='faq-answer'>
-                                Absolutely! Gear Gremlin uses a secure HTTPS connection to encrypt all data sent between the client and the server. All user data is stored in a secure database, and passwords hashed and salted to ensure your data is safe.
+                                Absolutely! Gear Gremlin uses a secure HTTPS connection to encrypt all data sent between the client and the server. All user data is stored in a secure database, and passwords are hashed and salted to ensure your data is safe. You can also choose to login using your Google account!
                             </p>
                         )}
                     </div>
@@ -237,7 +238,7 @@ const HomePage = () => {
                         </div>
                         {expandedCardIndex.includes(5) && (
                             <p className='faq-answer'>
-                                Yup! You can download your packing list as a PDF file to print out and use as a physical checklist while packing. Just click the "Download Packing List" button on the pack list page.
+                                Yup! You can download your packing list as a PDF file to print out and use as a physical checklist while packing. Just click the "Download Packing List" button on the pack list page. This also makes it easy to plan and organize for a trip with a group, as individual packlists can quickly be shared to eliminate unnecessary weight and ensure that all of the needed gear is accounted for in someone's pack.
                             </p>
                         )}
                     </div>
