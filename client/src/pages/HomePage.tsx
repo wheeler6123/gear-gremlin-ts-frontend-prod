@@ -69,7 +69,7 @@ const HomePage = () => {
     return (
         <div>
             <Helmet>
-                <meta name="description" content="Don't forget to pack anything on your next outdoor adventure! Enter your gear inventory into the Gear Gremlin database, then create custom packing lists for any trip you want! Pack lists can be saved for future use and even exported to use as  a packing checklist!"/>
+                <meta name="description" content="Gear Gremlin: Simplify your outdoor adventures with our all-in-one gear organizer and trip planner! Register for free to track, plan, and pack your gear based on trip type, duration, and weather. Simplify planning for your camping, hunting, and fishing trips. Export trips to PDF to share and never forget an essential item again!"/>
             </Helmet>
             <div className={showHeader ? 'header' : 'header-hidden'}>
                 <Header />
