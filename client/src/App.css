@@ -276,6 +276,10 @@ h1, h2, h3, h4, h5, h6 {
 .login-button-container {
   display: flex;
   flex-direction: row-reverse;
+  height: 3rem;
+  width: 64px;
+  border-radius: 10px;
+  margin-right: 20px;
 }
 
 /* Home Page Styles Start */
@@ -801,11 +805,15 @@ h1, h2, h3, h4, h5, h6 {
   .login-button {
     margin-right: 0;
     font-size: 1.2rem;
+    padding: 8px;
     background-color: rgba(83, 91, 242, 0.9);
     color: white;
     cursor: pointer;
     font-weight: 700;
     border-style: none;
+    border-radius: 10px;
+    height: 3rem;
+    width: 72px;
   }
   
 
@@ -888,8 +896,15 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .faq {
-    width: 95%;
     margin: 15px;
+  }
+
+  .faq-card {
+    width: 90%;
+  }
+
+  .faq-card p {
+    margin: 0 20px;
   }
 
   .faq-header {
